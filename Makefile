@@ -66,3 +66,6 @@ else
 		["readme"]="linter README.md" \
 	)
 endif
+
+bddset: ## Set bdd
+	@cp database_init/01_phpfpm.sql lampy/mariadb_init/01_phpfpm.sql
