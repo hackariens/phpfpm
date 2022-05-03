@@ -29,8 +29,14 @@ docker swarm
 Hosts:
 
 - phpmfpm.traefik.me
-- mailhog-phpmfpm.traefik.me
-- phpmyadmin-phpmfpm.traefik.me
+
+## Download
+
+```sh
+git clone git@github.com:koromerzhin/template-phpfpm.git template-phpfpm
+cd template-phpfpm
+git submodule update --init
+```
 
 ## Install
 
