@@ -1,0 +1,25 @@
+version: "3.4"
+networks:
+  proxylampy:
+    external: true
+  serverlampy:
+    external: true
+  net:
+    driver: overlay
+    attachable: true
+services:
+  apache:
+    networks:
+      - net
+      - proxylampy
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.phpfpm.rule=Host(`phpfpm.traefik.me`)"
+        - "traefik.http.routers.phpfpm-tls.tls.domains[0].main=phpfpm.traefik.me"
+        - "traefik.http.routers.phpfpm.tls=true"
+        - "traefik.http.services.phpfpm.loadbalancer.server.port=80"
+  phpfpm:
+    networks:
+      - net
+      - serverlampy
