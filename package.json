@@ -50,6 +50,6 @@
   },
   "homepage": "https://github.com/hackariens/phpfpm#readme",
   "dependencies": {
-    "korojscommands": "^1.2.11"
+    "korojscommands": "^1.2.12"
   }
 }
