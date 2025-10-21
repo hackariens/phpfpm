@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "Templates pour la création d'un nouveau projet phpfpm",
   "scripts": {
-    "lint:markdown": "markdownlint README.md",
-    "lint:phpaudit": "npm-run-all lint:phpcs lint:phpmd lint:phpmnd lint:phpstan",
     "lint:stylelint:fix": "stylelint assets/scss/*.scss --fix",
     "lint:stylelint": "stylelint assets/scss/*.scss",
     "release": "release-it"
@@ -21,11 +19,11 @@
   },
   "homepage": "https://github.com/hackariens/phpfpm#readme",
   "devDependencies": {
-    "cypress": "^15.3.0",
-    "dotenv": "^17.2.3",
-    "jscpd": "^4.0.5",
-    "markdownlint-cli": "^0.45.0",
-    "release-it": "^19.0.5",
-    "yaml-lint": "^1.7.0"
+    "cypress": "15.3.*",
+    "dotenv": "17.2.*",
+    "jscpd": "4.0.*",
+    "markdownlint-cli": "0.45.*",
+    "release-it": "19.0.*",
+    "yaml-lint": "1.7.*"
   }
 }
